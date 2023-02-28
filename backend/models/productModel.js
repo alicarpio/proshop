@@ -1,3 +1,4 @@
+
 import mongoose from "mongoose";
 
 const reviewSchema = mongoose.Schema({
@@ -52,10 +53,8 @@ const productSchema = mongoose.Schema(
             required: true,
             default: 0
         },
-
-
         isAdmin: {
-            type: boolean,
+            type: Boolean,
             required: true,
             default: false
         }
@@ -64,6 +63,6 @@ const productSchema = mongoose.Schema(
         timestamps: true
     })
 
-const Product = mongoose.model('User', userSchema)
+const Product = mongoose.model('Product', productSchema)
 
-export default User
+export default Product
